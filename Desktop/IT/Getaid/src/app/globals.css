@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@500&family=Oxygen:wght@300;400;700&family=Quicksand&display=swap');
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+.getaid{
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.tagline{
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 72px;
+  line-height: 1.4;
+}
+
+.description{
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 24px;
+  font-style: normal;
+}
+.why{
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 42px;
+}
+.btn:hover{
+  background: #881337;
+}
+.btn{
+  @apply py-3 px-6 rounded-md transition duration-300
+};
+
+.btn-primary{
+  @apply hover:bg-button-hover rounded-lg
+};
+
+.btn-minimal{
+  @apply bg-white  border border-gray-300 hover:bg-gray-300 rounded-lg text-black
+};
+.btn-semi{
+  @apply py-2 px-4 bg-white  border border-button-hover hover:bg-gray-300 rounded-lg text-black
+};
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
