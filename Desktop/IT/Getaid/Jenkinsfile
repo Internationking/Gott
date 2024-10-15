@@ -28,7 +28,7 @@ pipeline {
                 script {
                     // Push to Docker Hub or run the container
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
-                        docker.image('my-app-image').push('latest')
+                        docker.image('getaidapp').push('latest')
                     }
                 }
             }
